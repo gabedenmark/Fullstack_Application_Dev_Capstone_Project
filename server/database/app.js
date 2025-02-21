@@ -89,7 +89,7 @@ app.get('/fetchDealer/:id', async (req, res) => {
     //Write your code here
     const id = parseInt(req.params.id, 10);  // Created a particular ID with parse integer
     try {
-        const dealership = await Dealerships.findOne({ id }); 
+        const dealership = await Dealerships.find({ id }); 
         if (!dealership) {
             res.status(404).json({ error: 'No dealership found with ID: ${id}'});
         } else {
