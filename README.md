@@ -166,7 +166,7 @@ The architecture consists of the following components:
    - Get the URL and add it to the .env file, that is located in the djangoapp folder (no / backslashes).
    - Make sure there is a space between backend_url and = in your .env file.
 
-    ```bash
+   ```bash
    backend_url =your backend url(server)
    sentiment_analyzer_url =your code engine deployment url/
    ```
