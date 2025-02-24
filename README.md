@@ -149,7 +149,7 @@ The architecture consists of the following components:
   ```
 
 <a id="SBME"></a>
-2. **Set up the Backend Mongo Express server**
+2. **Set up the Backend Mongo Express Server**
    - Navigate to the Database directory
    ```bash
    cd Fullstack_Application_Dev_Capstone_Project/server/database
