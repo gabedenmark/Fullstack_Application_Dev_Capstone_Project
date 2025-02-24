@@ -44,9 +44,9 @@ This project is the final capstone for the **IBM Fullstack Software Developer Pr
             <a href="#II">Installation Instructions</a>
             <ul>
                 <li><a href="#CR">Clone the repository</a></li>
-                <li><a href="#SVE">Set up virtual environment</a></li>
-                <li><a href="#SDB">Set up Django Backend</a></li>
                 <li><a href="#SBME">Set up the Backend Mongo Express server</a></li>
+                <li><a href="#SDB">Set up Django Backend</a></li>
+                <li><a href="#SVE">Set up Virtual Enviroment</a></li>
                 <li><a href="#FE">Frontend</a></li>
                 <li><a href="#CE">Code Engine</a></li>
             </ul>
@@ -145,14 +145,38 @@ The solution architecture consists of the following components:
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/SiRipo92/Fullstack_Dev_Capstone_Project
-   cd Fullstack_Dev_Capstone_Project
+   git clone https://github.com/gabedenmark/Fullstack_Application_Dev_Capstone_Project.git
+   cd Fullstack_Application_Dev_Capstone_Project
+   ```
+
+<a id="SBME"></a>
+1. **Set up the Backend Mongo Express server**
+   - Navigate to the Database directory
+   ```bash
+   cd Fullstack_Application_Dev_Capstone_Project/server/database
+   ```
+   - Build the nodeapp:
+   ```bash
+   docker build . -t nodeapp
+   ```
+   - Start the server:
+   ```bash
+   docker-compose up
+   ```
+   - The server will be running on port 3030.
+   - Get the URL of it and add it to the .env file, that is located in the djangoapp folder (no / backslashes).
+   - Make sure there is a space between backend_url and = in your .env file.
+
+    ```bash
+   backend_url =your backend url(server)
+   sentiment_analyzer_url =your code engine deployment url/
    ```
 
 <a id="SVE"></a>
-2. **Set up virtual environment**
+2. **Set up Virtual Environment**
+   - Open new terminal:
    ```bash
-   cd Fullstack_Dev_Capstone_Project/server
+   cd Fullstack_Application_Dev_Capstone_Project/server
    pip install virtualenv
    virtualenv djangoenv
    source djangoenv/bin/activate
@@ -171,26 +195,11 @@ The solution architecture consists of the following components:
    python3 manage.py runserver
    ```
 
-<a id="SBME"></a>
-4. **Set up the Backend Mongo Express server**
-   - Navigate to the Database directory
-   ```bash
-   cd server/database
-   ```
-   - Build the nodeapp:
-   ```bash
-   docker build . -t nodeapp
-   ```
-   - Start the server:
-   ```bash
-   docker-compose up
-   ```
-
 <a id="FE"></a>
 5. **Frontend (React):**
-   - Navigate to the frontend directory and install dependencies:
+   - Open new terminal, navigate to the frontend directory and install dependencies:
    ```bash
-   cd frontend
+   cd Fullstack_Application_Dev_Capstone_Project/serverserver/frontend
    npm install
    ```
    - Run the React app:
@@ -205,21 +214,29 @@ The solution architecture consists of the following components:
    - Start code engine by creating a project.
    - Once the code engine set up is complete, you can see that it is active. Click on Code Engine CLI to begin the pre-configured CLI in the terminal below.
    - You will observe that the pre-configured CLI statrup and the home directory is set to the current directory.
-     As a part of the pre-configuration, the project has been set up and Kubeconfig is set up. The details that are shown on the terminal.
-   - Navigate to cd server/djangoapp/microservices
-   - Docker build the sentiment analyzer ap:
+   - As a part of the pre-configuration, the project has been set up and Kubeconfig is set up. The details that are shown on the terminal.
+   - Navigate in the same terminal run the following commands:
+   
+   ```bash
+   cd Fullstack_Application_Dev_Capstone_Project/server/djangoapp/microservices
+   ```
+   - Run the following command to docker build the sentiment analyzer app(note the code engine instance is transient and is attached to your lab space username):
    ```bash
    docker build . -t us.icr.io/${SN_ICR_NAMESPACE}/senti_analyzer
    ```
-   - Push the docker image:
+   - Push the docker image by running the following command:
    ```bash
    docker push us.icr.io/${SN_ICR_NAMESPACE}/senti_analyzer
    ```
-   - Deploy the Senti_analyzer application on code engine
-   - Obtain the URL and add to .env file (no / backslashes) (do the same for the backend after running MongoDB server (Port 3030)
+   - Deploy the senti_analyzer application on code engine:
    ```bash
-   sentiment_analyzer_url=your code engine deployment url
-   backend_url = your backend url
+   ibmcloud ce application create --name sentianalyzer --image us.icr.io/${SN_ICR_NAMESPACE}/senti_analyzer --registry-secret icr-secret --port 5000
+   ```
+   - Obtain the URL and add to .env file, which is inside the folder djangoapp (you must add / backslash)
+   - Make sure there is a space between sentiment_analyzer_url and = in your .env file.
+   ```bash
+   backend_url =your backend url
+   sentiment_analyzer_url =your code engine deployment url/
    ```
 
 <a id="CICD"></a>
@@ -238,3 +255,20 @@ The solution architecture consists of the following components:
 - Yan Luo - Backend Developer
 - Priya - Frontend Developer
 - **Sierra Ripoche - Full-Stack Developer**
+
+
+#Troubleshooting
+
+Please ensure that you stop and restart the entire Django server whenever you make any code changes using the following commands:
+
+python3 manage.py makemigrations  
+
+python3 manage.py migrate --run-syncdb  
+
+python3 manage.py runserver  
+
+Additionally, stop and restart the backend server to reflect the changes using these commands:  
+
+docker build . -t nodeapp  
+
+docker-compose up  
