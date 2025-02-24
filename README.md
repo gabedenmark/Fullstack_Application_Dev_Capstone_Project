@@ -129,7 +129,7 @@ The architecture consists of the following components:
 
 <a id="AUTHU"></a>
 ### Authorized Users
-- In addition to anonymous features, authorized users can:
+ In addition to anonymous features, authorized users can:
 - Submit reviews for any dealership.
 - Submit a review which will appear at the top of the list of reviews on the dealership detail page.
 
