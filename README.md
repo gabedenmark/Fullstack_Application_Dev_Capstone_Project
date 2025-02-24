@@ -163,7 +163,7 @@ The architecture consists of the following components:
    docker-compose up
    ```
    - The server will be running on port 3030.
-   - Get the URL of it and add it to the .env file, that is located in the djangoapp folder (no / backslashes).
+   - Get the URL and add it to the .env file, that is located in the djangoapp folder (no / backslashes).
    - Make sure there is a space between backend_url and = in your .env file.
 
     ```bash
