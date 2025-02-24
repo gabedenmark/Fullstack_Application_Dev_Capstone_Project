@@ -7,7 +7,7 @@ by **Gabe Denmark**
 
 ## Overview
 
-This project is the final capstone for the **IBM Fullstack Software Developer Professional Certificate** course. The goal of this project is to develop a web application for a national car dealership with branches across the United States that allows users to view dealership information and leave reviews for each branch. The project uses a variety of technologies including **Javascript**, **React**, **Node.js**, **Python**, **Django**, **MongoDB**, **Docker** and **IBM Cloud**.
+This project is the final capstone for the **IBM Fullstack Software Developer Professional Certificate** course. The goal of this project is to develop a web application for a national car dealership with branches across the United States that allows users to view dealership information and leave reviews for each branch. The project uses a variety of technologies including **HTML**, **CSS**, **Javascript**, **React**, **Node.js**, **Python**, **Django**, **MongoDB**, **Docker** and **IBM Cloud**.
 
 
 <h2>Table of Contents</h2>
@@ -82,9 +82,13 @@ A market survey conducted by the car dealership company revealed a strong intere
 <a id="TU"></a>
 ## Technologies Used
 
-- **Django**: Backend web framework to manage dealership data, user authentication, and reviews.
+- **HTML**: Markup language Front-end development for the site.
+- **CSS**: Used to specify the presentation and style of the site.
+- **Javascript**: Programming language that allows the implementation of complex front-end features in the site.
 - **React**: Frontend framework for building dynamic user interfaces.
 - **Node.js**: Server to handle dealership and review data with MongoDB.
+- **Python**: Backend programming language used for structured, object-oriented and functional programming on the site.
+- **Django**: Backend web framework of Python ecosystem to manage dealership data, user authentication.
 - **MongoDB**: Database used to store dealership and review data.
 - **Docker**: Containerization technology for packaging the application and services.
 - **IBM Cloud Code Engine**: Cloud platform to deploy the sentiment analysis service.
