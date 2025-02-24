@@ -3,3 +3,4 @@
 </center>
 
 # Dealerships Review Portal - Fullstack Software Developer Capstone Project
+by **Gabe Denmark**
