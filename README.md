@@ -57,6 +57,9 @@ This project is the final capstone for the **IBM Fullstack Software Developer Pr
             <a href="#DPL">Deployment</a>
         </li>
         <li>
+            <a href="#TS">TroubleShooting</a>
+        </li>
+        <li>
             <a href="#CN">Contributors</a>
         </li>
     </ul>
@@ -247,27 +250,38 @@ The architecture consists of the following components:
 1. Kubernetes: Deploy the application and its microservices on Kubernetes for scalability.
 2. IBM Cloud: Deploy the Sentiment Analyzer microservice on IBM Cloud Code Engine.
 
+
+<a id="TS"></a>
+##Troubleshooting
+
+
+* If you make any code changes, please ensure that you stop the entire Django server.
+* Next use the following commands and restart the server:
+```bash
+python3 manage.py makemigrations  
+
+python3 manage.py migrate --run-syncdb  
+
+python3 manage.py runserver  
+```
+
+* Additionally, stop and restart the backend server to reflect the changes using these commands:  
+```bash
+docker build . -t nodeapp  
+
+docker-compose up  
+```
+
+
+
+
+
+
 <a id="CN"></a>
 ### Contributors: 
 - Upkar Lidder - Lead Full-Stack Software Developer
 - Lavanya - Full-Stack Developer
 - Yan Luo - Backend Developer
 - Priya - Frontend Developer
-- **Sierra Ripoche - Full-Stack Developer**
+- **Gabe Denmark - Full-Stack Developer**
 
-
-#Troubleshooting
-
-Please ensure that you stop and restart the entire Django server whenever you make any code changes using the following commands:
-
-python3 manage.py makemigrations  
-
-python3 manage.py migrate --run-syncdb  
-
-python3 manage.py runserver  
-
-Additionally, stop and restart the backend server to reflect the changes using these commands:  
-
-docker build . -t nodeapp  
-
-docker-compose up  
