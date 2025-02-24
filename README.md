@@ -183,11 +183,11 @@ The architecture consists of the following components:
 
 <a id="SDB"></a>
 4. **Set up Django Backend**
-   - Install Python dependencies :
+   - Install the required packages by running the following command:
    ```bash
    python3 -m pip install -U -r requirements.txt 
    ```
-   - Run migrations to set up the database and start development server:
+   - Run the following command to perform model migration and start the server:
    ```bash
    python3 manage.py makemigrations
    python3 manage.py migrate
