@@ -1,5 +1,5 @@
 <center>
-    <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-PY0101EN-SkillsNetwork/IDSNlogo.png" width="500" alt="cognitiveclass.ai logo">
+    <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-PY0101EN-SkillsNetwork/IDSNlogo.png" width="600" alt="cognitiveclass.ai logo">
 </center>
 
 # Dealerships Review Portal - Fullstack Application Development Capstone Project
