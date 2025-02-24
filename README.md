@@ -166,7 +166,7 @@ The architecture consists of the following components:
    docker-compose up
    ```
    - The server will be running on port 3030.
-   - Get the URL and add into the .env file, that is located in the djangoapp folder (no / backslashes).
+   - Get the URL and add into the .env file, that is located in the djangoapp folder (without / slash).
    - Make sure there is a space between backend_url and = in your .env file.
 
    ```bash
@@ -242,7 +242,7 @@ The architecture consists of the following components:
    ```bash
    ibmcloud ce application create --name sentianalyzer --image us.icr.io/${SN_ICR_NAMESPACE}/senti_analyzer --registry-secret icr-secret --port 5000
    ```
-   - Obtain the URL and add to .env file, which is inside the folder djangoapp (you must add / backslash)
+   - Obtain the URL and add to .env file, which is inside the folder djangoapp (you must append / slash)
    - Make sure there is a space between sentiment_analyzer_url and = in your .env file.
    ```bash
    backend_url =your backend url
@@ -265,7 +265,7 @@ The architecture consists of the following components:
 
 
 * If you make any code changes, please ensure that you stop the entire Django server.
-* Next use the following commands and restart the server:
+* Next use the following commands and restart the server to apply the changes. This step is crucial.
 ```bash
 python3 manage.py makemigrations  
 
