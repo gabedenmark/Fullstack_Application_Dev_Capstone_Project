@@ -214,7 +214,7 @@ The architecture consists of the following components:
    - Once the code engine set up is complete, you can see that it is active. Click on Code Engine CLI to begin the pre-configured CLI in the terminal below.
    - You will observe that the pre-configured CLI statrup and the home directory is set to the current directory.
    - As a part of the pre-configuration, the project has been set up and Kubeconfig is set up. The details that are shown on the terminal.
-   - Navigate in the same terminal run the following commands in the microservices folder:
+   - Navigate in the same terminal and run the following commands in the microservices folder:
    
    ```bash
    cd Fullstack_Application_Dev_Capstone_Project/server/djangoapp/microservices
