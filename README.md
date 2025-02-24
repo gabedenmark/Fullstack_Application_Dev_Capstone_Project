@@ -150,7 +150,7 @@ The architecture consists of the following components:
    ```
 
 <a id="SBME"></a>
-1. **Set up the Backend Mongo Express server**
+2. **Set up the Backend Mongo Express server**
    - Navigate to the Database directory
    ```bash
    cd Fullstack_Application_Dev_Capstone_Project/server/database
@@ -173,7 +173,7 @@ The architecture consists of the following components:
    ```
 
 <a id="SVE"></a>
-2. **Set up Virtual Environment**
+3. **Set up Virtual Environment**
    - Open new terminal:
    ```bash
    cd Fullstack_Application_Dev_Capstone_Project/server
@@ -183,7 +183,7 @@ The architecture consists of the following components:
    ```
 
 <a id="SDB"></a>
-3. **Set up Django Backend**
+4. **Set up Django Backend**
    - Install Python dependencies :
    ```bash
    python3 -m pip install -U -r requirements.txt 
