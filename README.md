@@ -7,7 +7,7 @@ by **Gabe Denmark**
 
 ## Overview
 
-This project is the final capstone for the **Fullstack Software Developer** certification course. The goal of this project is to develop a web application for a national car dealership with branches across the United States, enabling users to view dealership information and leave reviews for each branch. This project leverages various technologies including **Django**, **React**, **Node.js**, **MongoDB**, **Docker**, and **IBM Cloud**.
+This project is the final capstone for the **Fullstack Software Developer** certification course by IBM. The goal of this project is to develop a web application for a national car dealership with branches across the United States, enabling users to view dealership information and leave reviews for each branch. This project leverages various technologies including **Django**, **React**, **Node.js**, **MongoDB**, **Docker**, and **IBM Cloud**.
 
 
 <h2>Table of Contents</h2>
@@ -33,10 +33,20 @@ This project is the final capstone for the **Fullstack Software Developer** cert
             </ul>
         </li>
         <li>
-            <a href="#quiz">Quiz on Dictionaries</a>
+            <a href="#US">User Stories</a>
+            <ul>
+                <li><a href="#AU">Anonymous Users</a></li>
+                <li><a href="#AUTHU">Authorized Users</a></li>
+                <li><a href="#ADMU">Admin Users</a></li>
+            </ul>
         </li>
-        <li> 
-            <a href="#Scenario">Scenario</a>
+        <li>
+            <a href="#US">User Stories</a>
+            <ul>
+                <li><a href="#AU">Anonymous Users</a></li>
+                <li><a href="#AUTHU">Authorized Users</a></li>
+                <li><a href="#ADMU">Admin Users</a></li>
+            </ul>
         </li>
     </ul>
 
@@ -92,3 +102,22 @@ The solution architecture consists of the following components:
    - **SQLite** for storing car make and model data in Django.
    - **MongoDB** for storing dealer and review data in the Node.js service.
 
+<a id="US"></a>
+## User Stories
+
+<a id="AU"></a>
+### Anonymous Users
+- View the **Contact Us** and **About Us** pages.
+- View a list of dealerships across the United States, with the ability to filter by state.
+- View reviews for each dealership.
+
+<a id="AUTHU"></a>
+### Authorized Users
+- In addition to anonymous features, authorized users can:
+  - Submit reviews for any dealership.
+  - Submit a review which will appear at the top of the list of reviews on the dealership detail page.
+
+<a id="ADMU"></a>
+### Admin Users
+- Log into the admin interface to manage dealership data.
+- Add new makes, models, and other attributes for dealerships.
