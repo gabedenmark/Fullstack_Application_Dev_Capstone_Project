@@ -29,7 +29,6 @@ This project is the final capstone for the **IBM Fullstack Software Developer Pr
                 <li><a href="#DRS">Dealerships and Reviews Service (Node.js/Express)</a></li>
                 <li><a href="#SA">Sentiment Analyzer (IBM Cloud Code Engine)</a></li>
                 <li><a href="#DB">Database</a></li>
-                <li><a href="#keys">Database</a></li>
             </ul>
         </li>
         <li>
@@ -163,7 +162,7 @@ The architecture consists of the following components:
    docker-compose up
    ```
    - The server will be running on port 3030.
-   - Get the URL and add it to the .env file, that is located in the djangoapp folder (no / backslashes).
+   - Get the URL and add into the .env file, that is located in the djangoapp folder (no / backslashes).
    - Make sure there is a space between backend_url and = in your .env file.
 
    ```bash
