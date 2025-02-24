@@ -172,7 +172,8 @@ The architecture consists of the following components:
 
 <a id="SVE"></a>
 3. **Set up Virtual Environment**
-   - Open new terminal and navigate to the server directory:
+   - Open new terminal and navigate to the server directory.
+   - Run the following to set up the Django environment:
    ```bash
    cd Fullstack_Application_Dev_Capstone_Project/server
    pip install virtualenv
