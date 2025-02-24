@@ -86,7 +86,7 @@ A market survey conducted by the car dealership company revealed a strong intere
 - **Javascript**: Programming language that allows the implementation of complex front-end features in the site.
 - **React**: Frontend framework for building dynamic user interfaces.
 - **Node.js**: Server to handle dealership and review data with MongoDB.
-- **Python**: Backend programming language used for structured, object-oriented and functional programming on the site.
+- **Python**: Backend programming language used for structured, object-oriented and functional programming enviroment in the site.
 - **Django**: Backend web framework of Python ecosystem to manage dealership data, user authentication.
 - **MongoDB**: Database used to store dealership and review data.
 - **Docker**: Containerization technology for packaging the application and services.
