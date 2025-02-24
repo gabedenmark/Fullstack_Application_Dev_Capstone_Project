@@ -250,7 +250,6 @@ The architecture consists of the following components:
    sentiment_analyzer_url =your code engine deployment url/
    ```
 
-
 <a id="CICD"></a>
 ## CI / CD
 - Workflow is created to lint files to meet PEP8 guidelines. When code is pushed to the repository, the workflow will automatically begin to lint the Python and JavaScript files.
@@ -260,8 +259,6 @@ The architecture consists of the following components:
 ## Deployment 
 1. Kubernetes: Deploy the application and its microservices on Kubernetes for scalability.
 2. IBM Cloud: Deploy the Sentiment Analyzer microservice on IBM Cloud Code Engine.
-
-
 
 <a id="TS"></a>
 ## Troubleshooting
@@ -283,11 +280,6 @@ docker build . -t nodeapp
 
 docker-compose up  
 ```
-
-
-
-
-
 
 <a id="CN"></a>
 ### Contributors: 
