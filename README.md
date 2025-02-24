@@ -147,6 +147,7 @@ The architecture consists of the following components:
 1. **Clone the repository**:
   ```bash
   git clone https://github.com/gabedenmark/Fullstack_Application_Dev_Capstone_Project.git
+
   cd Fullstack_Application_Dev_Capstone_Project
   ```
 
@@ -170,6 +171,7 @@ The architecture consists of the following components:
 
    ```bash
    backend_url =your backend url(server)
+
    sentiment_analyzer_url =your code engine deployment url/
    ```
 
@@ -179,8 +181,11 @@ The architecture consists of the following components:
    - Run the following to set up the Django environment:
    ```bash
    cd Fullstack_Application_Dev_Capstone_Project/server
+
    pip install virtualenv
+
    virtualenv djangoenv
+
    source djangoenv/bin/activate
    ```
 
@@ -193,7 +198,9 @@ The architecture consists of the following components:
    - Run the following command to perform model migration and start the server:
    ```bash
    python3 manage.py makemigrations
+
    python3 manage.py migrate
+
    python3 manage.py runserver
    ```
 
@@ -202,6 +209,7 @@ The architecture consists of the following components:
    - Open new terminal, navigate to the frontend directory and install dependencies:
    ```bash
    cd Fullstack_Application_Dev_Capstone_Project/serverserver/frontend
+
    npm install
    ```
    - Run the React app:
@@ -238,6 +246,7 @@ The architecture consists of the following components:
    - Make sure there is a space between sentiment_analyzer_url and = in your .env file.
    ```bash
    backend_url =your backend url
+
    sentiment_analyzer_url =your code engine deployment url/
    ```
 
