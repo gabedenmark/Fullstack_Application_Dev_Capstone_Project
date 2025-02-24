@@ -252,7 +252,7 @@ The architecture consists of the following components:
 
 
 <a id="TS"></a>
-##Troubleshooting
+## Troubleshooting
 
 
 * If you make any code changes, please ensure that you stop the entire Django server.
