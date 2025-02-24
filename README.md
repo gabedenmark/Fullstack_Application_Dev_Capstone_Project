@@ -45,8 +45,8 @@ This project is the final capstone for the **IBM Fullstack Software Developer Pr
             <ul>
                 <li><a href="#CR">Clone the repository</a></li>
                 <li><a href="#SBME">Set up the Backend Mongo Express server</a></li>
-                <li><a href="#SDB">Set up Django Backend</a></li>
                 <li><a href="#SVE">Set up Virtual Enviroment</a></li>
+                <li><a href="#SDB">Set up Django Backend</a></li>
                 <li><a href="#FE">Frontend</a></li>
                 <li><a href="#CE">Code Engine</a></li>
             </ul>
