@@ -97,7 +97,7 @@ A market survey conducted by the car dealership company revealed a strong intere
 <a id="ARCH"></a>
 ## Architecture
 
-The solution architecture consists of the following components:
+The architecture consists of the following components:
 
 <a id="DW"></a>
 **Dealerships Website (Django)**:
