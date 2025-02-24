@@ -144,10 +144,10 @@ The architecture consists of the following components:
 <a id="CR"></a>
 1. **Clone the repository**:
 
-   ```bash
-   git clone https://github.com/gabedenmark/Fullstack_Application_Dev_Capstone_Project.git
-   cd Fullstack_Application_Dev_Capstone_Project
-   ```
+  ```bash
+  git clone https://github.com/gabedenmark/Fullstack_Application_Dev_Capstone_Project.git
+  cd Fullstack_Application_Dev_Capstone_Project
+  ```
 
 <a id="SBME"></a>
 2. **Set up the Backend Mongo Express server**
