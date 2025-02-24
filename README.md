@@ -41,12 +41,24 @@ This project is the final capstone for the **Fullstack Software Developer** cert
             </ul>
         </li>
         <li>
-            <a href="#US">User Stories</a>
+            <a href="#II">Installation Instructions</a>
             <ul>
-                <li><a href="#AU">Anonymous Users</a></li>
-                <li><a href="#AUTHU">Authorized Users</a></li>
-                <li><a href="#ADMU">Admin Users</a></li>
+                <li><a href="#CR">Clone the repository</a></li>
+                <li><a href="#SVE">Set up virtual environment</a></li>
+                <li><a href="#SDB">Set up Django Backend</a></li>
+                <li><a href="#SBME">Set up the Backend Mongo Express server</a></li>
+                <li><a href="#FE">Frontend</a></li>
+                <li><a href="#CE">Code Engine</a></li>
             </ul>
+        </li>
+        <li>
+            <a href="#CICD">CI / CD</a>
+        </li>
+        <li>
+            <a href="#DPL">Deployment</a>
+        </li>
+        <li>
+            <a href="#CN">Contributors</a>
         </li>
     </ul>
 
@@ -114,10 +126,111 @@ The solution architecture consists of the following components:
 <a id="AUTHU"></a>
 ### Authorized Users
 - In addition to anonymous features, authorized users can:
-  - Submit reviews for any dealership.
-  - Submit a review which will appear at the top of the list of reviews on the dealership detail page.
+- Submit reviews for any dealership.
+- Submit a review which will appear at the top of the list of reviews on the dealership detail page.
 
 <a id="ADMU"></a>
 ### Admin Users
 - Log into the admin interface to manage dealership data.
 - Add new makes, models, and other attributes for dealerships.
+
+<a id="II"></a>
+## Installation Instructions
+
+<a id="CR"></a>
+1. **Clone the repository**:
+
+   ```bash
+   git clone https://github.com/SiRipo92/Fullstack_Dev_Capstone_Project
+   cd Fullstack_Dev_Capstone_Project
+   ```
+
+<a id="SVE"></a>
+2. **Set up virtual environment**
+   ```bash
+   cd Fullstack_Dev_Capstone_Project/server
+   pip install virtualenv
+   virtualenv djangoenv
+   source djangoenv/bin/activate
+   ```
+
+<a id="SDB"></a>
+3. **Set up Django Backend**
+   - Install Python dependencies :
+   ```bash
+   python3 -m pip install -U -r requirements.txt 
+   ```
+   - Run migrations to set up the database and start development server:
+   ```bash
+   python3 manage.py makemigrations
+   python3 manage.py migrate
+   python3 manage.py runserver
+   ```
+
+<a id="SBME"></a>
+4. **Set up the Backend Mongo Express server**
+   - Navigate to the Database directory
+   ```bash
+   cd server/database
+   ```
+   - Build the nodeapp:
+   ```bash
+   docker build . -t nodeapp
+   ```
+   - Start the server:
+   ```bash
+   docker-compose up
+   ```
+
+<a id="FE"></a>
+5. **Frontend (React):**
+   - Navigate to the frontend directory and install dependencies:
+   ```bash
+   cd frontend
+   npm install
+   ```
+   - Run the React app:
+   ```bash
+   npm run build
+   ```
+
+<a id="CE"></a>
+6. **Code Engine**:
+   To run the Cloud Code Engine service to access Sentiment Analyzer Microservice:
+   - Navigate to Skills Network Toolbox, and under Cloud, find Code Engine.
+   - Start code engine by creating a project.
+   - Once the code engine set up is complete, you can see that it is active. Click on Code Engine CLI to begin the pre-configured CLI in the terminal below.
+   - You will observe that the pre-configured CLI statrup and the home directory is set to the current directory.
+     As a part of the pre-configuration, the project has been set up and Kubeconfig is set up. The details that are shown on the terminal.
+   - Navigate to cd server/djangoapp/microservices
+   - Docker build the sentiment analyzer ap:
+   ```bash
+   docker build . -t us.icr.io/${SN_ICR_NAMESPACE}/senti_analyzer
+   ```
+   - Push the docker image:
+   ```bash
+   docker push us.icr.io/${SN_ICR_NAMESPACE}/senti_analyzer
+   ```
+   - Deploy the Senti_analyzer application on code engine
+   - Obtain the URL and add to .env file (no / backslashes) (do the same for the backend after running MongoDB server (Port 3030)
+   ```bash
+   sentiment_analyzer_url=your code engine deployment url
+   backend_url = your backend url
+   ```
+
+<a id="CICD"></a>
+## CI / CD
+- Workflow is created to lint files to meet PEP8 guidelines. When code is pushed to the repository, the workflow will automatically begin to lint the Python and JavaScript files.
+
+<a id="DPL"></a>
+## Deployment 
+1. Kubernetes: Deploy the application and its microservices on Kubernetes for scalability.
+2. IBM Cloud: Deploy the Sentiment Analyzer microservice on IBM Cloud Code Engine.
+
+<a id="CN"></a>
+### Contributors: 
+- Upkar Lidder - Lead Full-Stack Software Developer
+- Lavanya - Full-Stack Developer
+- Yan Luo - Backend Developer
+- Priya - Frontend Developer
+- **Sierra Ripoche - Full-Stack Developer**
