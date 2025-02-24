@@ -149,7 +149,7 @@ The architecture consists of the following components:
 
 <a id="SBME"></a>
 2. **Set up the Backend Mongo Express Server**
-   - Navigate to the Database directory
+   - Navigate to the database directory
    ```bash
    cd Fullstack_Application_Dev_Capstone_Project/server/database
    ```
@@ -172,7 +172,7 @@ The architecture consists of the following components:
 
 <a id="SVE"></a>
 3. **Set up Virtual Environment**
-   - Open new terminal:
+   - Open new terminal and navigate to the server directory:
    ```bash
    cd Fullstack_Application_Dev_Capstone_Project/server
    pip install virtualenv
