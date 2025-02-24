@@ -7,7 +7,7 @@ by **Gabe Denmark**
 
 ## Overview
 
-This project is the final capstone for the **IBM Fullstack Software Developer** certification course. The goal of this project is to develop a web application for a national car dealership with branches across the United States that allows users to view dealership information and leave reviews for each branch. The project uses a variety of technologies including **Django**, **React**, **Node.js**, **MongoDB**, **Docker**, and **IBM Cloud**.
+This project is the final capstone for the **IBM Fullstack Software Developer Professional Certificate** certification course. The goal of this project is to develop a web application for a national car dealership with branches across the United States that allows users to view dealership information and leave reviews for each branch. The project uses a variety of technologies including **Django**, **React**, **Node.js**, **MongoDB**, **Docker**, and **IBM Cloud**.
 
 
 <h2>Table of Contents</h2>
