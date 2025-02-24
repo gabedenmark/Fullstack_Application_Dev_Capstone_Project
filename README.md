@@ -57,7 +57,7 @@ This project is the final capstone for the **IBM Fullstack Software Developer Pr
             <a href="#DPL">Deployment</a>
         </li>
         <li>
-            <a href="#TS">TroubleShooting</a>
+            <a href="#TS">Troubleshooting</a>
         </li>
         <li>
             <a href="#CN">Contributors</a>
